@@ -3,11 +3,10 @@ import { User } from './Users/Models/User.js';
 
 const app = express();
 
-app.get('/', (request, response) => {
-    response.send('Hola mundo');
+app.get('/api/v1/usuarios', async (request, response) => {
+    response.json(await User.findAll());
 });
 
 app.listen(3000, async () => {
-    console.log(await User.findAll());
     console.log('App listening on port 3000');
 });
