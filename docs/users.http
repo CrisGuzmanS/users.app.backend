@@ -4,10 +4,11 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMTZhNmViZS05
 ###
 POST http://localhost:3000/api/v1/usuarios HTTP/1.1
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMTZhNmViZS05ZDdmLTRlYTQtOWFmNS1hNWIyY2E4ZGEzZmUiLCJpYXQiOjE3MDcwNzE4NjQsImV4cCI6MTcwNzA3NTQ2NH0.6jd6U6WGa86flMCCOZUWe5-TrMWIQnfdHzoTfb2fiMg
 
 {
-    "name": "Carlos",
-    "email": "carlos@gmail.com",
+    "name": "Francisco",
+    "email": "francisco@gmail.com",
     "password": "abcde12345!"
 }
 
