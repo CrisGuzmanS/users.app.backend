@@ -2,6 +2,10 @@ GET http://localhost:3000/api/v1/usuarios HTTP/1.1
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMTZhNmViZS05ZDdmLTRlYTQtOWFmNS1hNWIyY2E4ZGEzZmUiLCJpYXQiOjE3MDcwNzE4NjQsImV4cCI6MTcwNzA3NTQ2NH0.6jd6U6WGa86flMCCOZUWe5-TrMWIQnfdHzoTfb2fiMg
 
 ###
+GET http://localhost:3000/api/v1/token/verify HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMTZhNmViZS05ZDdmLTRlYTQtOWFmNS1hNWIyY2E4ZGEzZmUiLCJpYXQiOjE3MDcwNzg4MTEsImV4cCI6MTcwNzA4MjQxMX0.cMd9kaRvmsE1Vh6ftxf1TvQzr9dYWsgDi1NaS6dB4ZI
+
+###
 POST http://localhost:3000/api/v1/usuarios HTTP/1.1
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMTZhNmViZS05ZDdmLTRlYTQtOWFmNS1hNWIyY2E4ZGEzZmUiLCJpYXQiOjE3MDcwNzE4NjQsImV4cCI6MTcwNzA3NTQ2NH0.6jd6U6WGa86flMCCOZUWe5-TrMWIQnfdHzoTfb2fiMg
