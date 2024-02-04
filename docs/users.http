@@ -5,7 +5,17 @@ POST http://localhost:3000/api/v1/usuarios HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "Erick",
-    "email": "erick.2@gmail.com",
-    "password": "rewr345445343"
+    "name": "Carlos",
+    "email": "carlos@gmail.com",
+    "password": "abcde12345!"
+}
+
+
+###
+POST http://localhost:3000/api/v1/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "carlos@gmail.com",
+    "password": "abcde12345"
 }
