@@ -16,11 +16,14 @@ export const loginController = async (request, response) => {
         return response.status(401).json({ message: 'Credenciales incorrectas' });
     }
 
-    console.log(env('JWT_SECRET_KEY'));
+    const token = jwt.sign({ userId: user.id }, env('JWT_SECRET_KEY'), { expiresIn: '1h' });
 
-    // const token = jwt.sign({userId: user.id}, );
+    const jsonResponse = {
+        message: 'Usuario logueado correctamente',
+        data: {
+            token
+        }
+    };
 
-    // return response.json({})
-
-    return "ok";
+    return response.json(jsonResponse);
 }
