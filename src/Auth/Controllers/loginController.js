@@ -10,6 +10,8 @@ export const loginController = async (request, response) => {
 
     const userExist = await PasswordService.check(password, user.password);
 
+    console.log(userExist)
+
     if (!userExist) {
         return "error";
     }
