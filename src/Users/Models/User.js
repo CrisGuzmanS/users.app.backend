@@ -4,7 +4,7 @@ import { sequelize } from "../../database.js";
 const User = sequelize.define('users', {
     id: {
         type: DataTypes.UUID,
-        defaultValue: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4,
         primaryKey: true
     },
 
