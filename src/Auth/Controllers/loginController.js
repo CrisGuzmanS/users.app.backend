@@ -5,10 +5,14 @@ import { env } from "../../Shared/env.js";
 
 export const loginController = async (request, response) => {
     const { email, password } = request.body;
-
+    
     const user = await User.findOne({
         where: { email: email }
     })
+    
+    if(!user) {
+        return response.status(401).json({ message: 'Credenciales incorrectas' });
+    }
 
     const userExist = await PasswordService.check(password, user.password);
 
