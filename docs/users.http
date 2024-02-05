@@ -1,5 +1,5 @@
 GET http://localhost:3000/api/v1/usuarios HTTP/1.1
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMTZhNmViZS05ZDdmLTRlYTQtOWFmNS1hNWIyY2E4ZGEzZmUiLCJpYXQiOjE3MDcwOTg0OTMsImV4cCI6MTcwNzEwMjA5M30.5fXhVVe_03XVpAD8SWdsOi8r7739cyPIvEvTebWq7eQ
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMTZhNmViZS05ZDdmLTRlYTQtOWFmNS1hNWIyY2E4ZGEzZmUiLCJpYXQiOjE3MDcxMDI0MjgsImV4cCI6MTcwNzEwNjAyOH0.n5C12Cx3U6cTFElKQHrjAfn1RP5FVOSNdVZ-MFsWBfs
 
 ###
 GET http://localhost:3000/api/v1/usuarios/116a6ebe-9d7f-4ea4-9af5-a5b2ca8da3fe HTTP/1.1
@@ -20,6 +20,15 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMTZhNmViZS05
     "password": "abcde12345!"
 }
 
+###
+PATCH http://localhost:3000/api/v1/usuarios/116a6ebe-9d7f-4ea4-9af5-a5b2ca8da3fe
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMTZhNmViZS05ZDdmLTRlYTQtOWFmNS1hNWIyY2E4ZGEzZmUiLCJpYXQiOjE3MDcxMDI0MjgsImV4cCI6MTcwNzEwNjAyOH0.n5C12Cx3U6cTFElKQHrjAfn1RP5FVOSNdVZ-MFsWBfs
+
+{
+    "name": "Brandon",
+    "email": "brandon@gmail.com"
+}
 
 ###
 POST http://localhost:3000/api/v1/login HTTP/1.1
