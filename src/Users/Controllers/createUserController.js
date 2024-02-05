@@ -11,5 +11,5 @@ export const createUserController = async (request, response) => {
         email: email
     });
 
-    console.log(user);
+    return response.set(201).json({});
 }
