@@ -2,7 +2,7 @@ import { User } from '../Models/User.js';
 
 export const indexUserController = async (request, response) => {
 
-    const { page } = request.query.page ?? 1;
+    const { page = 1 } = request.query.page ?? 1;
 
     const records = 5
 
@@ -11,12 +11,17 @@ export const indexUserController = async (request, response) => {
         offest: records*page
     });
 
+    const lastPage = Math.ceil((await User.count()) / records)
+
+    console.log("🟣", (lastPage >= page+1) ? page+1 : null, lastPage, page+1)
+
     const jsonResponse = {
         data: users,
         meta: {
             current: page,
             records: records,
-            next: page+1
+            next: (lastPage >= page+1) ? page+1 : null,
+            last: lastPage
         }
     };
 
