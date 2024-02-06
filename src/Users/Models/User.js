@@ -29,7 +29,7 @@ User.paginate = async (records, page) => {
 
     const users = await User.findAll({
         limit: records,
-        offest: records*page
+        offset: records*(page-1)
     });
 
     const lastPage = Math.ceil((await User.count()) / records);
