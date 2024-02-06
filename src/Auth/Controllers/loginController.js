@@ -25,7 +25,8 @@ export const loginController = async (request, response) => {
     const jsonResponse = {
         message: 'Usuario logueado correctamente',
         data: {
-            token
+            token,
+            user
         }
     };
 
